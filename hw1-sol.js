@@ -11,7 +11,8 @@ function productOdds(list){
     return list.filter(a => a%2 != 0).reduce((prev, curr) => prev*curr, p);
 }
 function strIndexesStr(s, ...indexes){
-    return Array.from(indexes, a => s[a]).toString().replaceAll(',','');
+//    return Array.from(indexes, a => s[a]).toString().replaceAll(',','');
+    return Array.from(indexes, a => s[a]).join('');
 }
 function selector(obj, selector){
     const arr = selector.split('.')
@@ -33,13 +34,18 @@ function lineAt(str, n)
 function fixedLengthLines(str, len){
 const arr = str.split('\n')
 const arr1= arr.map(x => x.length < len ? x.padEnd(len) : x.slice(0, len))
-  return Array.from(arr1.slice(1,arr1.length)).reduce((prev, curr, i) => (prev.concat(curr).concat('\\n')) ,arr1[0].concat('\\n')).toString();
+  return Array.from(arr1.slice(1,arr1.length)).reduce((prev, curr, i) => (prev.concat(curr).concat('\n')) ,arr1[0].concat('\n')).toString();
+}
+function oddLengthLines(str){
+
+  return str.split('\n').map(x => x.length%2 !== 0 ? x.concat('\n') : '').join('');
+
 }
 /*console.log(rmPrefixSufix("twas brillig and the slithy toves",-1,-4));*/
 /*console.log(applyToEvens([1,2,3,4,5,6,7],n => n*2));*/
 /*console.log(productOdds([]));*/
-//console.log(strIndexesStr('Hello World',-1,-2));
+console.log(strIndexesStr('Hello World',1,2,6));
 //console.log(selector({a: [1, {b: 22}], c: 33, d: {f: {m: {s: {x: -32}}}}}, 'd.f.m.s.x'));
-const str = '012\nabcd\n87t8\n989'
-console.log(fixedLengthLines(str, 5));
+//const str = '01\n012\n0123\n01234\n'
+//console.log(fixedLengthLines(str,2));
 //console.log(selector({a: [1, {b: 22}], c: 33}, 'd'));
