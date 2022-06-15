@@ -44,6 +44,9 @@ function oddLengthLines(str){
 function fizzBuzz(n){
     return Array.from({length: n}, (e, i) => i+1).map(x => (x%3 === 0 && x%5 === 0)? 'fizz buzz' : x%3 === 0 ? 'fizz' : x%5 === 0 ? 'buzz' : x);
 }
+function range(n, init=0, inc=1){
+   return Array.from({length: n}, (e, i) => init+i*inc);
+}
 /*console.log(rmPrefixSufix("twas brillig and the slithy toves",-1,-4));*/
 /*console.log(applyToEvens([1,2,3,4,5,6,7],n => n*2));*/
 /*console.log(productOdds([]));*/
@@ -52,4 +55,5 @@ function fizzBuzz(n){
 //const str = '01\n012\n0123\n01234\n'
 //console.log(fixedLengthLines(str,2));
 //console.log(selector({a: [1, {b: 22}], c: 33}, 'd'));
-console.log(fizzBuzz(50));
+//console.log(fizzBuzz(50));
+console.log(range(4,3));
