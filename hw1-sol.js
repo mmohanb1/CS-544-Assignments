@@ -50,6 +50,15 @@ function range(n, init=0, inc=1){
 function sumOfPowers(x, n){
 return Array.from({length :n-1}, (_, i) => i+1).reduce((prev, curr) => prev=prev+Math.pow(x,curr), 1)
 }
+function iterExponential(n, x){
+var fact = 1, sum = 1, p = 1;
+  for(var i=1; i<n; i++){
+    fact = fact*i;
+    p=p*x;
+    sum+=(p)/(fact);
+  }
+  return sum;
+}
 /*console.log(rmPrefixSufix("twas brillig and the slithy toves",-1,-4));*/
 /*console.log(applyToEvens([1,2,3,4,5,6,7],n => n*2));*/
 /*console.log(productOdds([]));*/
@@ -60,4 +69,5 @@ return Array.from({length :n-1}, (_, i) => i+1).reduce((prev, curr) => prev=prev
 //console.log(selector({a: [1, {b: 22}], c: 33}, 'd'));
 //console.log(fizzBuzz(50));
 //console.log(range(4,3));
-console.log(sumOfPowers(2,8));
+//console.log(sumOfPowers(2,8));
+console.log(iterExponential(3,4));
