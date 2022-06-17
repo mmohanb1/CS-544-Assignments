@@ -19,7 +19,7 @@ function strIndexesStr(s, ...indexes){
    // const elems = Array.from(arr.slice(1, arr.length)).reduce((acc, e, i) => acc.concat(acc.at(-1)[e]) ,[obj[arr[0]]]);
 //    return elems[elems.length-1];
 //}
-function selector(obj, selector){
+function select(obj, selector){
     const arr = selector.split('.')
     return Array.from(arr.slice(1, arr.length)).reduce((acc, e, i) => acc[e] ,obj[arr[0]]);
     //return elems[elems.length-1];
