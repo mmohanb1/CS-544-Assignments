@@ -14,7 +14,7 @@ function strIndexesStr(s, ...indexes){
 //    return Array.from(indexes, a => s[a]).toString().replaceAll(',','');
     return Array.from(indexes, a => s[a]).join('');
 }
-//function selector(obj, selector){
+//function select(obj, selector){
   //  const arr = selector.split('.')
    // const elems = Array.from(arr.slice(1, arr.length)).reduce((acc, e, i) => acc.concat(acc.at(-1)[e]) ,[obj[arr[0]]]);
 //    return elems[elems.length-1];
