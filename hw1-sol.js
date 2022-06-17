@@ -46,7 +46,7 @@ function oddLengthLines(str){
   return str.split('\n').map(x => x.length%2 !== 0 ? x.concat('\n') : '').join('');
 
 }
-function fizzBuzz(n){
+function fizz_buzz(n){
     return Array.from({length: n}, (e, i) => i+1).map(x => (x%3 === 0 && x%5 === 0)? 'fizz buzz' : x%3 === 0 ? 'fizz' : x%5 === 0 ? 'buzz' : x);
 }
 function range(n, init=0, inc=1){
