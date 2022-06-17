@@ -1,4 +1,4 @@
-function rmPrefixSufix(str, m, n) {
+function rmPrefixSuffix(str, m, n) {
     
     return m >= 0 && n>= 0 ? str.slice(m, str.length-n):'Invalid input';
 }
